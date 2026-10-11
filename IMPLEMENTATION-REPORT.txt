@@ -1,0 +1,35 @@
+MOODOFF Black Friday — implementation and verification
+
+Preview: http://127.0.0.1:4174/
+Branch: moodoff-codex
+Entry: /Users/dasom/orca/workspaces/blackfriday-landing/moodoff-codex/index.html
+Server terminal: term_4bb19b3f-de17-421a-b498-2f397a43624e
+Browser page: b4896dce-1435-4e0d-80c0-1deced38822f
+
+Implemented
+- Standalone HTML with inline CSS and JavaScript; no build, CDN, font or framework dependencies.
+- Cool blue editorial campaign with maximum 60% discount and November 23–30 dates.
+- Exact additional 20% off sale price for top-and-bottom sets; additional 15% off invited friends' first orders.
+- Explicit notice that bundle and friend invitation discounts cannot be combined.
+- Three lounge categories with working filters, three shopping links to #products, accessible disclosure, focus indicators and skip navigation.
+- Two local AI-generated concept images; page explicitly labels imagery as illustrative. No prices, materials, SKU identities, stock or fabricated product specifications.
+
+Verification
+- Orca browser at widths 320, 375, 390, 768, 1024 and 1440: document width equals viewport width; no overflowing text or interactive elements; all four image elements loaded.
+- Desktop and mobile screenshots visually reviewed for typography, spacing, photo framing and overlap.
+- All three shopping links checked by browser clicks at 390 and 1440; #products appears below the sticky header.
+- All four category filters checked in browser at desktop and mobile sizes; all 14 button/filter checks passed.
+- Direct file:// opening verified: page title, local images and all four filter controls available.
+- Anchor animation removed after the embedded background browser stalled smooth scrolling; native anchor navigation passes.
+- Preview served from a dedicated Orca terminal; port 4174 was verified free immediately before launch.
+- QA screenshots and machine-readable results: /tmp/moodoff-codex-qa/
+- Screenshots at a viewport wider than the embedded browser surface exhibited compositor tiling; desktop visual review used the actual 1072px surface, while responsive DOM measurements also covered 1440px.
+
+Scope
+- This deliverable is the requested campaign landing page and category introduction. Purchase buttons navigate to its product section, as specified; no external checkout or invented catalog backend is included.
+- Work was limited to this worktree. No other worker designs were inspected, no merge or push was performed.
+
+Image generation
+Mode: built-in image_gen tool.
+Files: assets/moodoff-campaign.png; assets/lounge-edit.png.
+Prompts: see IMAGE-PROMPTS.txt.
